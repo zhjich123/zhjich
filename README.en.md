@@ -2,7 +2,7 @@
 
 > A powerful browser userscript that automatically sniffs media resources (images, videos, audio, streaming) on web pages, with one-click download and batch export support.
 
-[![version](https://img.shields.io/badge/version-v8.6.0beta-purple.svg)](https://github.com/zhjich123/zhjich)
+[![version](https://img.shields.io/badge/version-v8.6.0-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.0)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@ Support one-click parsing for video page links from these platforms:
 - **Tampermonkey** or **ScriptCat** extension installed
 
 ### One-Click Install
-1. Click the script file: [`media-sniffer-v8.2.0bate.user.js`](media-sniffer-v8.2.0bate.user.js)
+1. Click the script file: [`media-sniffer-v8.6.0.user.js`](media-sniffer-v8.6.0.user.js)
 2. Tampermonkey / ScriptCat will auto-detect and prompt for installation
 3. Click "Install"
 
@@ -124,6 +124,14 @@ Support one-click parsing for video page links from these platforms:
 ---
 
 ## 📝 Changelog
+
+### v8.6.0 (2026-06-28)
+- 🎉 **Stable Release**: Full code review and quality improvements
+- 🐛 Fix: M3U8 stop download not working (`stopDownload` couldn't access local variable)
+- 🐛 Fix: Version number inconsistency (header/U.VERSION/infoLine1 now unified)
+- 🧹 Cleanup: Removed duplicate translation keys in language packs
+- 🧹 Cleanup: Removed duplicate SPA route change listeners
+- 🧹 Cleanup: Fixed extra double-semicolon syntax
 
 ### v8.6.0beta (2026-06-27)
 - ✨ New: Batch video link parsing with progress bar

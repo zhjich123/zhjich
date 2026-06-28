@@ -2,7 +2,7 @@
 
 > 一个功能强大的浏览器油猴脚本，自动嗅探页面中的图片、视频、音频、流媒体等媒体资源，支持一键下载和批量导出。
 
-[![version](https://img.shields.io/badge/version-v8.6.0beta-purple.svg)](https://github.com/zhjich123/zhjich)
+[![version](https://img.shields.io/badge/version-v8.6.0-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.0)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@
 - 已安装 **Tampermonkey** 或 **ScriptCat** 扩展
 
 ### 一键安装
-1. 点击脚本文件：[`media-sniffer-v8.2.0bate.user.js`](media-sniffer-v8.2.0bate.user.js)
+1. 点击脚本文件：[`media-sniffer-v8.6.0.user.js`](media-sniffer-v8.6.0.user.js)
 2. Tampermonkey / ScriptCat 会自动检测并提示安装
 3. 点击「安装」即可
 
@@ -124,6 +124,14 @@
 ---
 
 ## 📝 更新日志
+
+### v8.6.0 (2026-06-28)
+- 🎉 **正式版发布**：全面代码扫描与质量优化
+- 🐛 修复：M3U8 停止下载功能失效（`stopDownload` 无法访问局部变量）
+- 🐛 修复：版本号不一致（头部/U.VERSION/infoLine1 三处统一）
+- 🧹 清理：删除语言包中重复的翻译键
+- 🧹 清理：删除重复注册的 SPA 路由监听器
+- 🧹 清理：修复多余的双分号语法
 
 ### v8.6.0beta (2026-06-27)
 - ✨ 新增：批量解析视频链接功能，带进度条
