@@ -3242,16 +3242,18 @@
         }
 
         modal.innerHTML =
+            '<div style="position:sticky;top:0;background:' + c.bg + ';z-index:10;">' +
             (isMobile ? '<div id="_ms_vlp_drag_handle" style="padding:12px 0 4px;display:flex;justify-content:center;cursor:grab;touch-action:none;">' +
                 '<div style="width:40px;height:5px;border-radius:3px;background:' + c.bg3 + ';"></div>' +
                 '</div>' : '') +
-            '<div style="padding:' + (isMobile ? '8px 16px 12px' : '16px 20px') + ';border-bottom:1px solid ' + c.border + ';display:flex;align-items:center;justify-content:space-between;">' +
+            '<div style="padding:' + (isMobile ? '0 16px 12px' : '16px 20px') + ';border-bottom:1px solid ' + c.border + ';display:flex;align-items:center;justify-content:space-between;">' +
                 '<div style="display:flex;align-items:center;gap:8px;font-size:' + (isMobile ? '15px' : '16px') + ';font-weight:600;color:' + c.txt + ';">' +
                     '<span style="font-size:20px;">' + siteIcon + '</span>' +
                     '<span>视频预览</span>' +
                     (siteName ? '<span style="font-size:12px;color:' + c.sub + ';">— ' + siteName + '</span>' : '') +
                 '</div>' +
-                '<button id="_ms_vlp_close" style="width:32px;height:32px;border:none;border-radius:8px;background:' + c.bg3 + ';color:' + c.txt + ';font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">×</button>' +
+                '<button id="_ms_vlp_close" style="width:40px;height:40px;border:none;border-radius:10px;background:' + c.bg3 + ';color:' + c.txt + ';font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;flex-shrink:0;">×</button>' +
+            '</div>' +
             '</div>' +
 
             '<div style="padding:' + (isMobile ? '12px 14px' : '20px') + ';">' +
