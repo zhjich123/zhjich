@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         媒体嗅探器 Media Sniffer Pro v8.6.0
 // @namespace    http://tampermonkey.net/
-// @version      8.6.0
+// @version      8.0.6
 // @description  图片/视频/音频/m3u8 抓取 · AES-128解密 · 分片合并 · 虚拟列表 · 进度可视化 · 跨域兜底 · Cookie/Storage · 翻译 · 元信息 · 高级筛选
 // @match        *://*/*
 // @exclude      *://*chrome.google.com/*
@@ -42,7 +42,7 @@
     // 🧩 模块 1：核心工具 (Utils) + 日志系统
     // =========================================================================
     var U = {};
-    U.VERSION = '8.6.0beta';
+    U.VERSION = '8.6.0';
     U.toStr = Object.prototype.toString;
     U.isArr = Array.isArray || function (x) { return U.toStr.call(x) === '[object Array]'; };
     U.isStr = function (x) { return typeof x === 'string'; };
@@ -361,7 +361,6 @@
             'copyN': '复制({n})',
             'downloadN': '下载({n})',
             'genScript': '生成下载脚本',
-            'rescan': '重新扫描',
             'plsCheck': '请至少选择一项',
             'scriptCopied': '脚本已复制到剪贴板',
             'rescanDone': '重新扫描完成',
@@ -408,7 +407,6 @@
             'no': '否',
             'parseFailNet': '网络请求失败',
             'parseFailTimeout': '请求超时',
-            'close': '关闭',
             'm3u8PreviewHint': 'm3u8 不可直接预览，请下载',
             'logLevelTitle': '📊 日志级别（调试用）',
             'logDebug': '调试',
@@ -434,7 +432,7 @@
             'referer': 'Referer:',
             'userAgent': 'User-Agent:',
             'cookie': 'Cookie:',
-            'infoLine1': '媒体嗅探器 Pro v8.6.0beta · 模块化架构 · AES-128 解密 · 虚拟列表 · 进度可视化',
+            'infoLine1': '媒体嗅探器 Pro v8.0.6 · 模块化架构 · AES-128 解密 · 虚拟列表 · 进度可视化',
             'infoLine2': '快捷键：Alt+T 翻译选中 · Alt+B 开关面板 · Esc 关闭',
             'clickTabScan': '点击标签扫描',
             'dlProgress': '下载进度',
@@ -1646,13 +1644,13 @@
         var chunks = new Array(total);
         var idx = 0;
         var running = 0;
-        var stopped = false;
+        M3U8._stopped = false;
         var completed = new Array(total); // 记录每个分片是否完成
 
         function tryFinish() {
             if (idx < total) return;
             if (running > 0) return;
-            if (stopped) return;
+            if (M3U8._stopped) return;
             if (failed > 0) { doneCb(null, '下载失败 ' + failed + ' 个分片'); return; }
             var totalLen = 0;
             for (var i = 0; i < total; i++) if (chunks[i]) totalLen += chunks[i].length;
@@ -1679,14 +1677,14 @@
         }
 
         function worker() {
-            if (stopped || idx >= total) { tryFinish(); return; }
+            if (M3U8._stopped || idx >= total) { tryFinish(); return; }
             var curIdx = idx++;
             running++;
             M3U8.fetchSegment(segments[curIdx].url, function (data, err) {
                 if (err) {
                     failed++; running--;
                     LOG.warn('分片下载失败:', curIdx, err);
-                    if (!stopped) worker(); else tryFinish();
+                    if (!M3U8._stopped) worker(); else tryFinish();
                     return;
                 }
                 // 如果加密，使用异步 AES-128-CBC 解密
@@ -1696,19 +1694,19 @@
                         if (derr) {
                             failed++; running--;
                             LOG.warn('分片解密失败:', curIdx, derr);
-                            if (!stopped) worker(); else tryFinish();
+                            if (!M3U8._stopped) worker(); else tryFinish();
                             return;
                         }
                         chunks[curIdx] = dec;
                         downloaded++; running--;
                         if (progressCb) progressCb(downloaded, total, failed);
-                        if (!stopped) worker(); else tryFinish();
+                        if (!M3U8._stopped) worker(); else tryFinish();
                     });
                 } else {
                     chunks[curIdx] = data;
                     downloaded++; running--;
                     if (progressCb) progressCb(downloaded, total, failed);
-                    if (!stopped) worker(); else tryFinish();
+                    if (!M3U8._stopped) worker(); else tryFinish();
                 }
             });
         }
@@ -1718,8 +1716,7 @@
 
     // ===== 停止下载 =====
     M3U8.stopDownload = function () {
-        // 这个标记会被 _downloadSegments 检查
-        stopped = true;
+        M3U8._stopped = true;
     };
 
         // ===== 生成下载脚本（跨域兜底）=====
