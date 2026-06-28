@@ -6,6 +6,8 @@
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
+**中文版本** | [English Version](README.en.md)
+
 ---
 
 ## ✨ 功能特性
