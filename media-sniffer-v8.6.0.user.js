@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         媒体嗅探器 Media Sniffer Pro v8.6.0
 // @namespace    http://tampermonkey.net/
-// @version      8.0.6
+// @version      8.6.0
 // @description  图片/视频/音频/m3u8 抓取 · AES-128解密 · 分片合并 · 虚拟列表 · 进度可视化 · 跨域兜底 · Cookie/Storage · 翻译 · 元信息 · 高级筛选
 // @match        *://*/*
 // @exclude      *://*chrome.google.com/*
@@ -432,7 +432,7 @@
             'referer': 'Referer:',
             'userAgent': 'User-Agent:',
             'cookie': 'Cookie:',
-            'infoLine1': '媒体嗅探器 Pro v8.0.6 · 模块化架构 · AES-128 解密 · 虚拟列表 · 进度可视化',
+            'infoLine1': '媒体嗅探器 Pro v8.6.0 · 模块化架构 · AES-128 解密 · 虚拟列表 · 进度可视化',
             'infoLine2': '快捷键：Alt+T 翻译选中 · Alt+B 开关面板 · Esc 关闭',
             'clickTabScan': '点击标签扫描',
             'dlProgress': '下载进度',
