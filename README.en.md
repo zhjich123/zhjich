@@ -2,7 +2,7 @@
 
 > A powerful browser userscript that automatically sniffs media resources (images, videos, audio, streaming) on web pages, with one-click download and batch export support.
 
-[![version](https://img.shields.io/badge/version-v8.6.0-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.0)
+[![version](https://img.shields.io/badge/version-v8.6.1-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.1)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@ Support one-click parsing for video page links from these platforms:
 - **Tampermonkey** or **ScriptCat** extension installed
 
 ### One-Click Install
-1. Click the script file: [`media-sniffer-v8.6.0.user.js`](media-sniffer-v8.6.0.user.js)
+1. Click the script file: [`media-sniffer-v8.6.1.user.js`](media-sniffer-v8.6.1.user.js)
 2. Tampermonkey / ScriptCat will auto-detect and prompt for installation
 3. Click "Install"
 
@@ -124,6 +124,12 @@ Support one-click parsing for video page links from these platforms:
 ---
 
 ## 📝 Changelog
+
+### v8.6.1 (2026-06-28)
+- 🐛 Fix: Video preview modal close button disappears when scrolling
+- ✨ Improve: Close button stays fixed at top (sticky), always visible while scrolling
+- ✨ Improve: Close button size increased from 32px to 40px, easier to tap
+- ✨ Improve: Mobile drag handle also fixed at top, swipe-to-close always available
 
 ### v8.6.0 (2026-06-28)
 - 🎉 **Stable Release**: Full code review and quality improvements

@@ -2,7 +2,7 @@
 
 > 一个功能强大的浏览器油猴脚本，自动嗅探页面中的图片、视频、音频、流媒体等媒体资源，支持一键下载和批量导出。
 
-[![version](https://img.shields.io/badge/version-v8.6.0-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.0)
+[![version](https://img.shields.io/badge/version-v8.6.1-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.1)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@
 - 已安装 **Tampermonkey** 或 **ScriptCat** 扩展
 
 ### 一键安装
-1. 点击脚本文件：[`media-sniffer-v8.6.0.user.js`](media-sniffer-v8.6.0.user.js)
+1. 点击脚本文件：[`media-sniffer-v8.6.1.user.js`](media-sniffer-v8.6.1.user.js)
 2. Tampermonkey / ScriptCat 会自动检测并提示安装
 3. 点击「安装」即可
 
@@ -124,6 +124,12 @@
 ---
 
 ## 📝 更新日志
+
+### v8.6.1 (2026-06-28)
+- 🐛 修复：视频预览弹窗关闭按钮滚动后看不见的问题
+- ✨ 优化：关闭按钮固定在弹窗顶部（sticky），滚动时始终可见
+- ✨ 优化：关闭按钮尺寸从 32px 加大到 40px，更易点击
+- ✨ 优化：移动端拖拽手柄也固定顶部，下滑关闭随时可用
 
 ### v8.6.0 (2026-06-28)
 - 🎉 **正式版发布**：全面代码扫描与质量优化
