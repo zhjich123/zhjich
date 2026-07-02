@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         媒体嗅探器 Media Sniffer Pro v8.6.2beta
+// @name         媒体嗅探器 Media Sniffer Pro v8.6.2
 // @namespace    http://tampermonkey.net/
-// @version      8.6.2beta
+// @version      8.6.2
 // @description  图片/视频/音频/m3u8 抓取 · AES-128解密 · 分片合并 · 虚拟列表 · 进度可视化 · 跨域兜底 · Cookie/Storage · 翻译 · 元信息 · 高级筛选
 // @match        *://*/*
 // @exclude      *://*chrome.google.com/*
@@ -42,7 +42,7 @@
     // 🧩 模块 1：核心工具 (Utils) + 日志系统
     // =========================================================================
     var U = {};
-    U.VERSION = '8.6.2beta';
+    U.VERSION = '8.6.2';
     U.toStr = Object.prototype.toString;
     U.isArr = Array.isArray || function (x) { return U.toStr.call(x) === '[object Array]'; };
     U.isStr = function (x) { return typeof x === 'string'; };
@@ -439,7 +439,7 @@
             'referer': 'Referer:',
             'userAgent': 'User-Agent:',
             'cookie': 'Cookie:',
-            'infoLine1': '媒体嗅探器 Pro v8.6.2beta · 模块化架构 · AES-128 解密 · 虚拟列表 · 进度可视化 · 主题切换',
+            'infoLine1': '媒体嗅探器 Pro v8.6.2 · 模块化架构 · AES-128 解密 · 虚拟列表 · 进度可视化 · 主题切换',
             'infoLine2': '快捷键：Alt+T 翻译选中 · Alt+B 开关面板 · Esc 关闭',
             'clickTabScan': '点击标签扫描',
             'dlProgress': '下载进度',
@@ -3102,7 +3102,7 @@
     };
 
     // =========================================================================
-    // 🔄 模块 6b：自动更新器 (AutoUpdater)
+    // 🔄 模块 6d：自动更新器 (AutoUpdater)
     // =========================================================================
     var AutoUpdater = {};
     AutoUpdater._lastCheckKey = '_ms_last_update_check';
@@ -4885,14 +4885,14 @@
             return;
         }
         var exists = UI._floatBtn && document.body && document.body.contains(UI._floatBtn);
-        console.log('[MS] buildFloatBtn 调用, 已存在:', !!UI._floatBtn, 'body存在:', !!document.body, 'contains:', exists);
+        LOG.info('[MS] buildFloatBtn 调用, 已存在:', !!UI._floatBtn, 'body存在:', !!document.body, 'contains:', exists);
         if (exists) {
             window.__ms_btn_built__ = true;
             return;
         }
         var host = document.body || document.documentElement;
         if (!host || host.nodeType !== 1) {
-            console.log('[MS] buildFloatBtn: 宿主不存在，跳过');
+            LOG.warn('[MS] buildFloatBtn: 宿主不存在，跳过');
             return;
         }
 
@@ -4971,11 +4971,8 @@
             UI._startFloatGuard();
             UI._setupMobileGestures();
 
-            console.log('[MS] 浮动按钮创建成功 ✓');
-
             LOG.info('浮动按钮创建成功 ✓');
         } catch (err) {
-            console.log('[MS] 浮动按钮创建失败:', err.message);
             LOG.error('浮动按钮创建失败:', err.message);
         }
     };

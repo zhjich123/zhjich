@@ -78,7 +78,7 @@ Support one-click parsing for video page links from these platforms:
 - **Tampermonkey** or **ScriptCat** extension installed
 
 ### One-Click Install
-1. Click the script file: [`media-sniffer-v8.6.2beta.user.js`](media-sniffer-v8.6.2beta.user.js)
+1. Click the script file: [`media-sniffer-v8.6.2.user.js`](media-sniffer-v8.6.2.user.js)
 2. Tampermonkey / ScriptCat will auto-detect and prompt for installation
 3. Click "Install"
 
@@ -125,12 +125,14 @@ Support one-click parsing for video page links from these platforms:
 
 ## 📝 Changelog
 
-### v8.6.2beta (2026-07-02)
+### v8.6.2 (2026-07-02)
 - ✨ New: Color scheme switching (VS Code-style one-click toggle)
 - ✨ New: 6 built-in preset palettes (Indigo / Purple / Blue / Green / Orange / Rose)
 - ✨ New: iOS-style Toggle Switch component
 - ✨ New: Auto-update check toggle + manual check now button
 - ✨ Improve: Light/dark mode and color scheme are independent, freely combinable
+- 🐛 Fix: Float button logs unified to use LOG module
+- 🧹 Cleanup: Duplicate module numbering and duplicate log output
 - 🌐 i18n: Chinese / English / Japanese / Korean
 
 ### v8.6.1 (2026-06-28)

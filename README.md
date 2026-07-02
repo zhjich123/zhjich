@@ -2,7 +2,7 @@
 
 > 一个功能强大的浏览器油猴脚本，自动嗅探页面中的图片、视频、音频、流媒体等媒体资源，支持一键下载和批量导出。
 
-[![version](https://img.shields.io/badge/version-v8.6.2beta-orange.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.2beta)
+[![version](https://img.shields.io/badge/version-v8.6.2-blue.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.2)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@
 - 已安装 **Tampermonkey** 或 **ScriptCat** 扩展
 
 ### 一键安装
-1. 点击脚本文件：[`media-sniffer-v8.6.2beta.user.js`](media-sniffer-v8.6.2beta.user.js)
+1. 点击脚本文件：[`media-sniffer-v8.6.2.user.js`](media-sniffer-v8.6.2.user.js)
 2. Tampermonkey / ScriptCat 会自动检测并提示安装
 3. 点击「安装」即可
 
@@ -125,12 +125,14 @@
 
 ## 📝 更新日志
 
-### v8.6.2beta (2026-07-02)
+### v8.6.2 (2026-07-02)
 - ✨ 新增：配色方案切换功能（VS Code 式一键切换）
 - ✨ 新增：6 套内置预设配色（靛蓝 / 紫色 / 海蓝 / 森绿 / 暖橙 / 玫红）
 - ✨ 新增：iOS 风格 Toggle Switch 开关组件
 - ✨ 新增：自动更新检测开关 + 手动立即检查入口
 - ✨ 优化：明暗模式与配色方案正交独立，可自由组合
+- 🐛 修复：浮动按钮日志统一使用 LOG 模块
+- 🧹 清理：模块编号重复、重复日志输出
 - 🌐 多语言：中/英/日/韩 四语支持
 
 ### v8.6.1 (2026-06-28)
