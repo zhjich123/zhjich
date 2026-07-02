@@ -2,7 +2,7 @@
 
 > A powerful browser userscript that automatically sniffs media resources (images, videos, audio, streaming) on web pages, with one-click download and batch export support.
 
-[![version](https://img.shields.io/badge/version-v8.6.1-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.1)
+[![version](https://img.shields.io/badge/version-v8.6.2beta-orange.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.2beta)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@ Support one-click parsing for video page links from these platforms:
 - **Tampermonkey** or **ScriptCat** extension installed
 
 ### One-Click Install
-1. Click the script file: [`media-sniffer-v8.6.1.user.js`](media-sniffer-v8.6.1.user.js)
+1. Click the script file: [`media-sniffer-v8.6.2beta.user.js`](media-sniffer-v8.6.2beta.user.js)
 2. Tampermonkey / ScriptCat will auto-detect and prompt for installation
 3. Click "Install"
 
@@ -125,49 +125,19 @@ Support one-click parsing for video page links from these platforms:
 
 ## 📝 Changelog
 
+### v8.6.2beta (2026-07-02)
+- ✨ New: Color scheme switching (VS Code-style one-click toggle)
+- ✨ New: 6 built-in preset palettes (Indigo / Purple / Blue / Green / Orange / Rose)
+- ✨ New: iOS-style Toggle Switch component
+- ✨ New: Auto-update check toggle + manual check now button
+- ✨ Improve: Light/dark mode and color scheme are independent, freely combinable
+- 🌐 i18n: Chinese / English / Japanese / Korean
+
 ### v8.6.1 (2026-06-28)
 - 🐛 Fix: Video preview modal close button disappears when scrolling
 - ✨ Improve: Close button stays fixed at top (sticky), always visible while scrolling
 - ✨ Improve: Close button size increased from 32px to 40px, easier to tap
 - ✨ Improve: Mobile drag handle also fixed at top, swipe-to-close always available
-
-### v8.6.0 (2026-06-28)
-- 🎉 **Stable Release**: Full code review and quality improvements
-- 🐛 Fix: M3U8 stop download not working (`stopDownload` couldn't access local variable)
-- 🐛 Fix: Version number inconsistency (header/U.VERSION/infoLine1 now unified)
-- 🧹 Cleanup: Removed duplicate translation keys in language packs
-- 🧹 Cleanup: Removed duplicate SPA route change listeners
-- 🧹 Cleanup: Fixed extra double-semicolon syntax
-
-### v8.6.0beta (2026-06-27)
-- ✨ New: Batch video link parsing with progress bar
-- ✨ New: Multi-quality switching support (8K/4K/1080P/720P)
-- ✨ New: Deep mobile optimization (long-press menu/swipe-down/gestures)
-- ✨ New: Multi-platform recognition (Xiaohongshu/Weibo/Zhihu/WeChat)
-- ✨ New: Enhanced video info (views/likes/coins/favorites/danmaku)
-- ✨ New: Three-level API fallback + exponential backoff retry + error cache
-- ✨ New: Floating button auto-edge-snap
-- 🔧 Optimized: Virtual list performance, smooth scrolling for 100+ items
-- 🔧 Optimized: Added @connect domains to avoid CORS confirmation popups
-
-### v8.5.0
-- ✨ New: Smart video page link parsing
-- ✨ New: Support for Bilibili/Douyin/Kuaishou platforms
-- ✨ New: Preview popup, direct preview after parsing
-- 🔧 Optimized: Video cover display logic
-
-### v8.4.0beta
-- ✨ New: Auto-extract video cover thumbnails
-- ✨ New: Video + canvas based cover extraction
-- ✨ New: Cache mechanism + viewport-priority loading
-- 🔧 Optimized: CORS cross-origin compatibility
-
-### Earlier Versions
-- Image/video/audio/m3u8 basic sniffing
-- Batch download with progress visualization
-- AES-128 decryption support
-- Multi-language translation
-- Cookie/Storage management
 
 ---
 

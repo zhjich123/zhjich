@@ -2,7 +2,7 @@
 
 > 一个功能强大的浏览器油猴脚本，自动嗅探页面中的图片、视频、音频、流媒体等媒体资源，支持一键下载和批量导出。
 
-[![version](https://img.shields.io/badge/version-v8.6.1-purple.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.1)
+[![version](https://img.shields.io/badge/version-v8.6.2beta-orange.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.2beta)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@
 - 已安装 **Tampermonkey** 或 **ScriptCat** 扩展
 
 ### 一键安装
-1. 点击脚本文件：[`media-sniffer-v8.6.1.user.js`](media-sniffer-v8.6.1.user.js)
+1. 点击脚本文件：[`media-sniffer-v8.6.2beta.user.js`](media-sniffer-v8.6.2beta.user.js)
 2. Tampermonkey / ScriptCat 会自动检测并提示安装
 3. 点击「安装」即可
 
@@ -125,49 +125,19 @@
 
 ## 📝 更新日志
 
+### v8.6.2beta (2026-07-02)
+- ✨ 新增：配色方案切换功能（VS Code 式一键切换）
+- ✨ 新增：6 套内置预设配色（靛蓝 / 紫色 / 海蓝 / 森绿 / 暖橙 / 玫红）
+- ✨ 新增：iOS 风格 Toggle Switch 开关组件
+- ✨ 新增：自动更新检测开关 + 手动立即检查入口
+- ✨ 优化：明暗模式与配色方案正交独立，可自由组合
+- 🌐 多语言：中/英/日/韩 四语支持
+
 ### v8.6.1 (2026-06-28)
 - 🐛 修复：视频预览弹窗关闭按钮滚动后看不见的问题
 - ✨ 优化：关闭按钮固定在弹窗顶部（sticky），滚动时始终可见
 - ✨ 优化：关闭按钮尺寸从 32px 加大到 40px，更易点击
 - ✨ 优化：移动端拖拽手柄也固定顶部，下滑关闭随时可用
-
-### v8.6.0 (2026-06-28)
-- 🎉 **正式版发布**：全面代码扫描与质量优化
-- 🐛 修复：M3U8 停止下载功能失效（`stopDownload` 无法访问局部变量）
-- 🐛 修复：版本号不一致（头部/U.VERSION/infoLine1 三处统一）
-- 🧹 清理：删除语言包中重复的翻译键
-- 🧹 清理：删除重复注册的 SPA 路由监听器
-- 🧹 清理：修复多余的双分号语法
-
-### v8.6.0beta (2026-06-27)
-- ✨ 新增：批量解析视频链接功能，带进度条
-- ✨ 新增：多清晰度切换支持（8K/4K/1080P/720P）
-- ✨ 新增：移动端深度优化（长按菜单/下滑关闭/手势操作）
-- ✨ 新增：多平台识别（小红书/微博/知乎/微信视频号）
-- ✨ 新增：视频信息增强（播放量/点赞/投币/收藏/弹幕）
-- ✨ 新增：三级 API 降级 + 指数退避重试 + 错误缓存
-- ✨ 新增：浮动按钮边缘自动吸附
-- 🔧 优化：虚拟列表性能，支持 100+ 条流畅滚动
-- 🔧 优化：新增 @connect 域名，避免跨域确认弹窗
-
-### v8.5.0
-- ✨ 新增：视频页面链接智能解析功能
-- ✨ 新增：支持 B站/抖音/快手 三大平台
-- ✨ 新增：预览弹窗，解析后直接预览视频
-- 🔧 优化：视频封面显示逻辑
-
-### v8.4.0beta
-- ✨ 新增：视频封面自动提取显示
-- ✨ 新增：基于 video + canvas 的封面提取
-- ✨ 新增：缓存机制 + 可见区域优先加载
-- 🔧 优化：CORS 跨域兼容性
-
-### 更早版本
-- 图片/视频/音频/m3u8 基础嗅探
-- 批量下载与进度可视化
-- AES-128 解密支持
-- 多语言翻译
-- Cookie/Storage 管理
 
 ---
 
