@@ -2,7 +2,7 @@
 
 > 一个功能强大的浏览器油猴脚本，自动嗅探页面中的图片、视频、音频、流媒体等媒体资源，支持一键下载和批量导出。
 
-[![version](https://img.shields.io/badge/version-v8.6.2-blue.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.2)
+[![version](https://img.shields.io/badge/version-v8.6.3-blue.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.3)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@
 - 已安装 **Tampermonkey** 或 **ScriptCat** 扩展
 
 ### 一键安装
-1. 点击脚本文件：[`media-sniffer-v8.6.2.user.js`](media-sniffer-v8.6.2.user.js)
+1. 点击脚本文件：[`media-sniffer-v8.6.3.user.js`](media-sniffer-v8.6.3.user.js)
 2. Tampermonkey / ScriptCat 会自动检测并提示安装
 3. 点击「安装」即可
 
@@ -124,6 +124,12 @@
 ---
 
 ## 📝 更新日志
+
+### v8.6.3 (2026-07-02)
+- 🐛 修复：浏览照片时滚动自动回到顶端的问题
+- ✨ 优化：滚动时暂停 MutationObserver，减少不必要的重渲染
+- ✨ 优化：renderMedia 保存/恢复滚动位置，双保险防止跳回顶部
+- ✨ 优化：停止滚动 300ms 后恢复 MO 监听，兼顾流畅度与资源检测
 
 ### v8.6.2 (2026-07-02)
 - ✨ 新增：配色方案切换功能（VS Code 式一键切换）

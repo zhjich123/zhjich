@@ -2,7 +2,7 @@
 
 > A powerful browser userscript that automatically sniffs media resources (images, videos, audio, streaming) on web pages, with one-click download and batch export support.
 
-[![version](https://img.shields.io/badge/version-v8.6.2beta-orange.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.2beta)
+[![version](https://img.shields.io/badge/version-v8.6.3-blue.svg)](https://github.com/zhjich123/zhjich/releases/tag/v8.6.3)
 [![license](https://img.shields.io/badge/license-Unlicense-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Tampermonkey%20%7C%20ScriptCat-blue.svg)](#)
 
@@ -78,7 +78,7 @@ Support one-click parsing for video page links from these platforms:
 - **Tampermonkey** or **ScriptCat** extension installed
 
 ### One-Click Install
-1. Click the script file: [`media-sniffer-v8.6.2.user.js`](media-sniffer-v8.6.2.user.js)
+1. Click the script file: [`media-sniffer-v8.6.3.user.js`](media-sniffer-v8.6.3.user.js)
 2. Tampermonkey / ScriptCat will auto-detect and prompt for installation
 3. Click "Install"
 
@@ -124,6 +124,12 @@ Support one-click parsing for video page links from these platforms:
 ---
 
 ## 📝 Changelog
+
+### v8.6.3 (2026-07-02)
+- 🐛 Fix: Scrolling auto-jumps to top when browsing photos
+- ✨ Improve: Pause MutationObserver during scrolling to reduce unnecessary re-renders
+- ✨ Improve: renderMedia saves/restores scroll position, double insurance against jump-to-top
+- ✨ Improve: Resume MO 300ms after scrolling stops, balance smoothness and resource detection
 
 ### v8.6.2 (2026-07-02)
 - ✨ New: Color scheme switching (VS Code-style one-click toggle)
